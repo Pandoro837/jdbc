@@ -32,9 +32,13 @@ public class AuthorSelectApp {
 		    
 			// 4.결과처리
 			while(rs.next()) {
-				int authorId = rs.getInt("author_id");
-				String authorName = rs.getString("author_name");
-				String authorDesc = rs.getString("author_desc");
+				int authorId = rs.getInt(1);						//컬럼명이 아니라 컬럼 순서를 int 값으로 적어도 작동한다
+				String authorName = rs.getString(2);				//컬럼 순서를 지정할 경우, 컬럼의 이름이 바뀌어 있어도 작동하는 장점이 있다
+				String authorDesc = rs.getString(3);
+				
+/*				int authorId = rs.getInt("author_id");				//컬럼 이름으로 지정할 경우, 컬럼의 순서가 변경되어도 작동한다
+				String authorName = rs.getString("author_name");	
+				String authorDesc = rs.getString("author_desc");*/
 				
 				System.out.println(authorId + ", " + authorName + ", " + authorDesc);
 			}
