@@ -11,7 +11,6 @@ public class AuthorApp {
 		int iCount;
 		
 		//리스트 출력
-		
 		authorList = authorDao.getAuthorList();
 		//리스트를 for문으로 출력
 		printList(authorList);
